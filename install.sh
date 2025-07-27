@@ -1,18 +1,23 @@
 #!/bin/bash
 # Installationsskript für Ideenberater
-# Dieses Skript muss als root ausgeführt werden.
 set -e
+
+if [ "$EUID" -ne 0 ]; then
+    echo "Bitte als root ausführen." >&2
+    exit 1
+fi
 
 read -p "Domain (z.B. ideenberater.domain.org): " DOMAIN
 read -p "OpenRouter Token: " TOKEN
 read -p "E-Mail für Let's Encrypt: " EMAIL
 
 # Pakete installieren
+export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y docker.io docker-compose nginx certbot python3-certbot-nginx git
 
 # Repository klonen
-git clone https://example.com/ideenberater.git /opt/ideenberater
+git clone https://github.com/ideenberater/ideenberater.git /opt/ideenberater
 cd /opt/ideenberater
 
 # .env erstellen

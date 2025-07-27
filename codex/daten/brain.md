@@ -13,3 +13,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Dockerfile und docker-compose.yml erstellt.
 - Einfaches PHP-Frontend (index.php, request.php, config.php) angelegt.
 - Beispielhafte Nginx-Konfiguration und Installationsskript hinzugefügt.
+
+## 2025-07-27 (Codex Lauf)
+- Installationsskript verbessert (Root-Prüfung, noninteractive apt).
+- Git-URL angepasst.
+- Indexseite mit einfachem CSS versehen.

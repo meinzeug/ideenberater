@@ -6,6 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Ideenberater</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        textarea { width: 100%; max-width: 500px; }
+        button { padding: 0.5em 1em; }
+    </style>
 </head>
 <body>
     <h1>Ideenberater</h1>
