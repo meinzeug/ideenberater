@@ -68,3 +68,8 @@
 - install.sh fragt nun nach Benutzername und Passwort und richtet auf Wunsch Basic Auth ein.
 - nginx-Konfiguration mit Kommentaren für Auth ergänzt.
 - Dokumentation und README angepasst.
+
+## [2025-07-28] Lokalisierte Fehlermeldungen
+- `lang.php` enthält nun Texte für Fehlermeldungen (DE/EN).
+- `request.php` gibt Fehlermeldungen in der gewählten Sprache aus.
+- Dokumentation und README aktualisiert.

@@ -10,12 +10,12 @@ $token = $config['OPENROUTER_TOKEN'] ?? '';
 $endpoint = $config['OPENROUTER_ENDPOINT'] ?? 'https://openrouter.ai/api/v1/chat/completions';
 
 if (!$token || $token === 'DEIN_TOKEN_HIER') {
-    die('API-Token fehlt. Bitte in config.php oder .env hinterlegen.');
+    die($t['error_token_missing']);
 }
 
 $problem = $_POST['problem'] ?? '';
 if (!$problem) {
-    die('Keine Eingabe erhalten.');
+    die($t['error_no_input']);
 }
 
 $ch = curl_init($endpoint);
@@ -42,20 +42,20 @@ curl_setopt_array($ch, [
 
 $response = curl_exec($ch);
 if ($response === false) {
-    die('Fehler bei der Anfrage: ' . curl_error($ch));
+    die($t['error_request'] . ' ' . curl_error($ch));
 }
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 if ($httpCode !== 200) {
-    die('API Fehler: HTTP ' . $httpCode);
+    die($t['error_api'] . ' HTTP ' . $httpCode);
 }
 curl_close($ch);
 
 $answer = json_decode($response, true);
 $jsonError = json_last_error();
 if ($jsonError !== JSON_ERROR_NONE) {
-    die('Ungültige Antwort von der API: ' . json_last_error_msg());
+    die($t['error_invalid_json'] . ' ' . json_last_error_msg());
 }
-$suggestion = $answer['choices'][0]['message']['content'] ?? 'Keine Antwort erhalten.';
+$suggestion = $answer['choices'][0]['message']['content'] ?? $t['error_no_answer'];
 
 // Anfrage und Antwort protokollieren
 $logDir = dirname(__DIR__) . '/logs';
