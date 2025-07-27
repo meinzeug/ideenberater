@@ -14,7 +14,21 @@ read -r -p "E-Mail für Let's Encrypt: " EMAIL
 # Pakete installieren
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -y docker.io docker-compose nginx certbot python3-certbot-nginx git
+
+# Bestehende Docker-Pakete entfernen, um Konflikte zu vermeiden
+apt-get remove -y docker docker-engine docker.io containerd runc 2>/dev/null || true
+
+# Docker Repository einrichten
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+apt-get update
+
+# Docker aus dem offiziellen Repository installieren
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Weitere benötigte Pakete installieren
+apt-get install -y nginx certbot python3-certbot-nginx git
 
 # Repository klonen
 git clone https://github.com/ideenberater/ideenberater.git /opt/ideenberater
@@ -27,7 +41,7 @@ OPENROUTER_ENDPOINT=https://openrouter.ai/api/v1/chat/completions
 EOF2
 
 # Docker starten
-docker-compose up -d
+docker compose up -d
 
 # Nginx konfigurieren
 cp nginx/ideenberater.conf /etc/nginx/sites-available/ideenberater.conf
