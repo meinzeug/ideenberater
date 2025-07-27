@@ -7,7 +7,7 @@ Die App wird komplett per `install.sh` eingerichtet, inklusive Docker-Container,
 ## 🔁 Installationsprozess (`install.sh`)
 
 ### 1. Voraussetzung prüfen
-- Ist `docker` und `docker-compose` vorhanden?
+- Ist `docker` und `docker compose` vorhanden?
 - Ist `nginx` vorhanden?
 - Falls nicht → automatische Installation via Paketmanager (`apt`, `dnf`, etc.)
 
@@ -31,7 +31,7 @@ Die App wird komplett per `install.sh` eingerichtet, inklusive Docker-Container,
   - SSL via Certbot (Let's Encrypt)
 - Certbot-Setup + Auto-Renewal
 ## Entwicklungsumgebung
-Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet die Anwendung mit `docker-compose up -d`.
+Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet die Anwendung mit `docker compose up -d`.
 
 
 ---
@@ -73,7 +73,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 - HTTPS dank Let's Encrypt (Auto-Renewal via Cron)
 - Zugriff auf PHP nur über Nginx + SSL
 - Docker-Isolierung für die PHP-App
-- Updates durch `git pull && docker-compose restart` möglich
+- Updates durch `git pull && docker compose restart` möglich
 
 ## 📜 Logs
 - Alle Anfragen und KI-Antworten werden in `logs/requests.log` gespeichert.
