@@ -31,3 +31,6 @@
 - `.gitignore` hinzugefügt
 - `shellcheck` und `env_setup.sh` getestet
 - `request.php` prüft Token und API-Status
+
+## [2025-07-27] Fehlerbehandlung verbessert
+- `request.php` prüft jetzt JSON-Fehler und bricht bei ungültiger Antwort ab.

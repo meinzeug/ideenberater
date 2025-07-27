@@ -45,6 +45,10 @@ if ($httpCode !== 200) {
 curl_close($ch);
 
 $answer = json_decode($response, true);
+$jsonError = json_last_error();
+if ($jsonError !== JSON_ERROR_NONE) {
+    die('Ungültige Antwort von der API: ' . json_last_error_msg());
+}
 $suggestion = $answer['choices'][0]['message']['content'] ?? 'Keine Antwort erhalten.';
 ?>
 <!DOCTYPE html>
