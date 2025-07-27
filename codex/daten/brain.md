@@ -80,3 +80,7 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Erweiterung: Export der Antwort als PDF.
 - FPDF-Bibliothek integriert und Download-Link ergänzt.
 - Dokumentation und README auf aktuellen Stand gebracht.
+
+## 2025-07-28 (Codex Lauf Placeholder)
+- Kleines UI-Update: Eingabefeld in `index.php` besitzt nun einen Platzhalter
+  und ist als Pflichtfeld markiert.

@@ -25,7 +25,7 @@ $t = $translations[$lang];
     <h1><?php echo htmlspecialchars($t['title']); ?></h1>
     <form action="request.php" method="post">
         <label for="problem"><?php echo htmlspecialchars($t['prompt']); ?></label><br>
-        <textarea name="problem" id="problem" cols="50" rows="5"></textarea><br>
+        <textarea name="problem" id="problem" cols="50" rows="5" placeholder="<?php echo htmlspecialchars($t['prompt']); ?>" required></textarea><br>
         <button type="submit"><?php echo htmlspecialchars($t['button']); ?></button>
     </form>
 </body>
