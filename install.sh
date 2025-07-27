@@ -20,11 +20,9 @@ apt-get install -y docker.io docker-compose nginx certbot python3-certbot-nginx 
 git clone https://github.com/ideenberater/ideenberater.git /opt/ideenberater
 cd /opt/ideenberater
 
-# .env erstellen
-cat > .env <<EOF2
-OPENROUTER_TOKEN=$TOKEN
-OPENROUTER_ENDPOINT=https://openrouter.ai/api/v1/chat/completions
-EOF2
+# .env aus Vorlage erstellen
+cp .env.example .env
+sed -i "s|DEIN_TOKEN_HIER|$TOKEN|" .env
 
 # Docker starten
 docker-compose up -d
