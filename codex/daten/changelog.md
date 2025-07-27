@@ -79,3 +79,6 @@
 - Bibliothek `fpdf` unter `php/lib/` eingebunden.
 - Ergebnisseite bietet Links zum Download von Markdown und PDF.
 - Dokumentation und README angepasst.
+
+## [2025-07-28] Verbesserte Eingabe
+- `index.php`: Textarea hat nun Platzhaltertext und ist als `required` markiert.
