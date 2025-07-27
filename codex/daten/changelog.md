@@ -43,3 +43,8 @@
 - `.env` in `.env.example` umbenannt
 - `.gitignore` angepasst, um Beispieldatei einzuschließen
 - Dokumentation entsprechend aktualisiert
+
+## [2025-07-27] Modell konfigurierbar
+- `OPENROUTER_MODEL` in `.env.example` aufgenommen
+- `config.php` und `request.php` verwenden nun diese Variable
+- README und docs ergänzt
