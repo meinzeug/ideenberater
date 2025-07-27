@@ -7,3 +7,9 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Initiale Projektstruktur angelegt.
 - Konzept, Dokumentation und Milestones erstellt.
 - Nächster Schritt: Arbeits-Prompt definieren und erste Code-Dateien planen.
+
+## 2025-07-27 (Fortsetzung)
+- Erste Implementierung der Basisinfrastruktur begonnen.
+- Dockerfile und docker-compose.yml erstellt.
+- Einfaches PHP-Frontend (index.php, request.php, config.php) angelegt.
+- Beispielhafte Nginx-Konfiguration und Installationsskript hinzugefügt.
