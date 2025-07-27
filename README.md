@@ -51,6 +51,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 ### .env.example / .env oder config.php
 - Das Beispiel `.env.example` zeigt die benötigten Variablen
 - Für den Betrieb wird daraus eine `.env` erstellt, die den OpenRouter-Token enthält
+- Optional kann das zu verwendende Modell über `OPENROUTER_MODEL` festgelegt werden
 
 ---
 
