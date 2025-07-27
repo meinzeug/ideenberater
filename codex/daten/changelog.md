@@ -26,3 +26,8 @@
 ## [2025-07-27] Weitere Verbesserungen
 - Cronjob in install.sh für automatisches Zertifikats-Renewal eingerichtet.
   - shellcheck Hinweise umgesetzt (read -r, Quotes)
+
+## [2025-07-27] Projektinitialisierung abgeschlossen
+- `.gitignore` hinzugefügt
+- `shellcheck` und `env_setup.sh` getestet
+- `request.php` prüft Token und API-Status

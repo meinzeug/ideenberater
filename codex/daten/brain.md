@@ -23,3 +23,9 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 ## 2025-07-27 (Codex Lauf Fortsetzung)
 - Cronjob für Zertifikatsrenewal in install.sh ergänzt.
 - shellcheck Hinweise umgesetzt (read -r, Variablen in Anführungszeichen).
+
+## 2025-07-27 (Codex Lauf Zusatz)
+- `.gitignore` hinzugefügt, um `.env` und Editor-Dateien auszuschließen.
+- `shellcheck` ausgeführt, keine Warnungen.
+- `env_setup.sh` getestet; meldet systemd Fehler im Container, aber Pakete werden installiert.
+- `request.php` prüft nun Token und HTTP-Status und gibt Fehlermeldungen aus.
