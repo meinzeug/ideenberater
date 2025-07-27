@@ -61,6 +61,7 @@ Das Skript führt folgende Schritte aus:
 - PDF-Export der KI-Antwort.
 - Sprachumschaltung (DE/EN) über GET-Parameter oder Session (bereits umgesetzt).
   Die Systemnachricht an die OpenRouter-API wird dabei ebenfalls in der gewählten Sprache gesendet.
+- Fehlermeldungen werden in der gewählten Sprache ausgegeben.
 - Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus (jetzt im Installationsskript integriert).
 
 ## Entwicklungsumgebung

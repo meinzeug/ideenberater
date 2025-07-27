@@ -69,3 +69,9 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Installationsskript erweitert, um optional Basic Auth per htpasswd einzurichten.
 - nginx-Konfiguration kommentiert, install.sh fügt Einträge bei Bedarf ein.
 - Dokumentation und README aktualisiert.
+
+## 2025-07-28 (Codex Lauf)
+- Idee: Fehlermeldungen sollen ebenfalls zweisprachig sein.
+- Neue Keys in `lang.php` für diverse Fehlermeldungen angelegt.
+- `request.php` nutzt diese Texte jetzt für `die()`-Ausgaben.
+- README und docs entsprechend ergänzt.
