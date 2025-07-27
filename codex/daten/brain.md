@@ -64,3 +64,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Der System-Prompt der API wurde mehrsprachig ausgeführt.
 - Übersetzung `system_message` in lang.php ergänzt.
 - request.php nutzt nun diese Übersetzung.
+
+## 2025-07-27 (Codex Lauf Auth)
+- Installationsskript erweitert, um optional Basic Auth per htpasswd einzurichten.
+- nginx-Konfiguration kommentiert, install.sh fügt Einträge bei Bedarf ein.
+- Dokumentation und README aktualisiert.

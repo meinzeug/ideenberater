@@ -63,3 +63,8 @@
 - `lang.php` enthält nun einen Schlüssel `system_message` für DE und EN.
 - `request.php` sendet diese Meldung als System-Prompt an die OpenRouter-API.
 - Dokumentation und README entsprechend ergänzt.
+
+## [2025-07-27] Optionale Authentifizierung
+- install.sh fragt nun nach Benutzername und Passwort und richtet auf Wunsch Basic Auth ein.
+- nginx-Konfiguration mit Kommentaren für Auth ergänzt.
+- Dokumentation und README angepasst.

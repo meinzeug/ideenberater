@@ -48,9 +48,11 @@ im Projekt **Ideenberater**.
 Das Skript führt folgende Schritte aus:
 1. Pakete prüfen und ggf. installieren.
 2. Parameter (Domain, Token, Mail) abfragen.
+   Optional: Benutzername und Passwort für Basic Auth eingeben.
 3. Repository nach `/opt/ideenberater` klonen.
 4. Docker-Container per `docker-compose up -d` starten.
 5. Nginx-Site anlegen und aktivieren.
+   Bei gesetzten Zugangsdaten wird Basic Auth konfiguriert.
 6. SSL-Zertifikat via Certbot erstellen.
 7. Cronjob für Auto-Renewal einrichten.
 
@@ -59,7 +61,7 @@ Das Skript führt folgende Schritte aus:
 - PDF-Export der KI-Antwort.
 - Sprachumschaltung (DE/EN) über GET-Parameter oder Session (bereits umgesetzt).
   Die Systemnachricht an die OpenRouter-API wird dabei ebenfalls in der gewählten Sprache gesendet.
-- Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus.
+- Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus (jetzt im Installationsskript integriert).
 
 ## Entwicklungsumgebung
 Für lokale Tests steht das Skript `codex/env_setup.sh` bereit. Es installiert Docker, Nginx, PHP und weitere Tools. Anschließend können die Container mit `docker-compose up -d` gestartet werden.
