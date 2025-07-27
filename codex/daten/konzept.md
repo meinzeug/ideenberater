@@ -40,5 +40,5 @@ kompletten Server einrichtet, inklusive SSL via Let's Encrypt.
 ## Besonderheiten
 * Kein Einsatz von Node.js oder komplexen Frameworks.
 * Updates sind über `git pull` und Neustart des Containers möglich.
-* Optionale Erweiterungen: Logging, Exportfunktionen, Spracheinstellungen,
+* Optionale Erweiterungen: Logging (bereits umgesetzt), Markdown-Exportfunktionen (umgesetzt), Spracheinstellungen,
   einfache Authentifizierung.

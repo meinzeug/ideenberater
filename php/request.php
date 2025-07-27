@@ -61,6 +61,14 @@ $logFile = $logDir . '/requests.log';
 $logEntry = date('c') . ' | INPUT: ' . str_replace(["\n", "\r"], ' ', $problem)
     . ' | OUTPUT: ' . str_replace(["\n", "\r"], ' ', $suggestion) . PHP_EOL;
 file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
+
+// Antwort als Markdown exportieren
+$exportDir = __DIR__ . '/exports';
+if (!is_dir($exportDir)) {
+    mkdir($exportDir, 0775, true);
+}
+$exportFile = $exportDir . '/idea_' . date('Ymd_His') . '.md';
+file_put_contents($exportFile, "# Idee\n\n" . $suggestion);
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -71,6 +79,7 @@ file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
 <body>
     <h1>Antwort</h1>
     <p><?php echo nl2br(htmlspecialchars($suggestion)); ?></p>
+    <p><a href="exports/<?php echo basename($exportFile); ?>" download>Markdown herunterladen</a></p>
     <a href="index.php">Neue Anfrage</a>
 </body>
 </html>
