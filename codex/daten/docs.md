@@ -22,7 +22,7 @@ im Projekt **Ideenberater**.
 ├── php/
 │   ├── index.php
 │   ├── request.php
-│   └── config.php (.env)
+│   └── config.php (.env.example / .env)
 ├── logs/
 │   └── requests.log
 └── nginx/
@@ -40,7 +40,7 @@ im Projekt **Ideenberater**.
 
 ## OpenRouter-API
 - Endpoint: wird über die Konfiguration festgelegt.
-- Authentifizierung: Bearer-Token aus `.env` bzw. `config.php`.
+ - Authentifizierung: Bearer-Token aus `.env` (angelegt aus `.env.example`) bzw. `config.php`.
 - Rückgabe: JSON mit den KI-Vorschlägen, die in `request.php` gerendert werden.
 
 ## Installationsskript (`install.sh`)
