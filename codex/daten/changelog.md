@@ -38,3 +38,8 @@
 ## [2025-07-27] Logging hinzugefügt
 - Nutzeranfragen und Antworten werden jetzt in `logs/requests.log` gespeichert.
 - Dokumentation angepasst (Verzeichnisstruktur und PHP-Ablauf).
+
+## [2025-07-27] Beispiel-Env-Datei
+- `.env` in `.env.example` umbenannt
+- `.gitignore` angepasst, um Beispieldatei einzuschließen
+- Dokumentation entsprechend aktualisiert

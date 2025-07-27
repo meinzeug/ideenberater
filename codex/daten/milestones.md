@@ -15,7 +15,7 @@ bis zur einsatzbereiten Anwendung.
 ## 3. PHP-Webanwendung
 - `index.php` mit Eingabeformular
 - `request.php` für API-Aufrufe
-- `config.php` / `.env` mit Token-Verwaltung
+ - `config.php` liest Token aus `.env` (Vorlage: `.env.example`)
 - Einfache Gestaltung (HTML/CSS)
 
 ## 4. Installationsskript (`install.sh`)

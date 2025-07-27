@@ -48,8 +48,9 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 - Sendet Anfrage an OpenRouter-API (mit Token)
 - Gibt KI-Antwort im HTML zurück
 
-### .env oder config.php
-- Speicherung des OpenRouter-Tokens
+### .env.example / .env oder config.php
+- Das Beispiel `.env.example` zeigt die benötigten Variablen
+- Für den Betrieb wird daraus eine `.env` erstellt, die den OpenRouter-Token enthält
 
 ---
 

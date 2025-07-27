@@ -17,7 +17,8 @@ kompletten Server einrichtet, inklusive SSL via Let's Encrypt.
    - `index.php`: Formular für Nutzereingaben
    - `request.php`: Weiterleitung der Anfrage an die OpenRouter-API und
      Rückgabe der Antwort
-   - `.env`/`config.php`: Speicherung des API-Tokens
+   - `.env.example` dient als Vorlage für `.env`
+   - `config.php` liest den Token aus der erstellten `.env`
 
 2. **Docker-Umgebung**
    - Container mit Apache und PHP

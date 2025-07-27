@@ -38,3 +38,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Logging für Nutzeranfragen umgesetzt.
 - Neue Datei `logs/requests.log` fängt Problem und Antwort auf.
 - Dokumentation entsprechend ergänzt.
+
+## 2025-07-27 (Codex Lauf erneut)
+- `.env` soll nicht versioniert werden. Um Nutzern ein Beispiel zu geben, habe ich die Datei in `.env.example` umbenannt.
+- `.gitignore` angepasst, damit `.env.example` im Repo verbleibt, aber echte `.env` Dateien weiterhin ignoriert werden.
+- Dokumentation aktualisiert (README, docs.md, Konzept, Milestones).
