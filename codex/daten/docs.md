@@ -40,8 +40,9 @@ im Projekt **Ideenberater**.
 
 ## OpenRouter-API
 - Endpoint: wird über die Konfiguration festgelegt.
- - Authentifizierung: Bearer-Token aus `.env` (angelegt aus `.env.example`) bzw. `config.php`.
+- Authentifizierung: Bearer-Token aus `.env` (angelegt aus `.env.example`) bzw. `config.php`.
 - Rückgabe: JSON mit den KI-Vorschlägen, die in `request.php` gerendert werden.
+- Modellauswahl über `OPENROUTER_MODEL` möglich (Standard: `gpt-3.5-turbo`).
 
 ## Installationsskript (`install.sh`)
 Das Skript führt folgende Schritte aus:

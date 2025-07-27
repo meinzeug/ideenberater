@@ -43,3 +43,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - `.env` soll nicht versioniert werden. Um Nutzern ein Beispiel zu geben, habe ich die Datei in `.env.example` umbenannt.
 - `.gitignore` angepasst, damit `.env.example` im Repo verbleibt, aber echte `.env` Dateien weiterhin ignoriert werden.
 - Dokumentation aktualisiert (README, docs.md, Konzept, Milestones).
+
+## 2025-07-27 (Codex Lauf weiter)
+- Erweiterung der Konfiguration um `OPENROUTER_MODEL`.
+- PHP-Skripte angepasst, sodass das Modell über die Umgebung gesteuert werden kann.
+- Dokumentation und README entsprechend ergänzt.

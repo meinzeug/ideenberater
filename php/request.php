@@ -16,8 +16,9 @@ if (!$problem) {
 
 $ch = curl_init($endpoint);
 
+$model = $config['OPENROUTER_MODEL'] ?? 'gpt-3.5-turbo';
 $data = [
-    'model' => 'gpt-3.5-turbo',
+    'model' => $model,
     'messages' => [
         ['role' => 'system', 'content' => 'Du bist ein hilfreicher Ideenberater.'],
         ['role' => 'user', 'content' => $problem]
