@@ -42,6 +42,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 - Eingabefeld: *„Beschreibe dein Problem“*
 - Button: *„Beraten lassen“*
 - Ergebnis: KI-Antwort mit Vorschlägen für passende Softwareideen
+- Sprachumschaltung über Links (DE/EN)
 
 ### request.php
 - Nimmt POST-Daten entgegen
@@ -96,7 +97,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 ## 🔧 Erweiterbar
 
 - PDF-Export der KI-Antwort
-- Sprachumschaltung (DE/EN)
+- Sprachumschaltung (DE/EN) – bereits integriert
 - Simple Authentifizierung (z. B. per Passwort)
 
 ---

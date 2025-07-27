@@ -1,5 +1,9 @@
 <?php
 // request.php - Sendet die Anfrage an die OpenRouter-API und gibt die Antwort aus
+session_start();
+$lang = $_SESSION['lang'] ?? 'de';
+$translations = include __DIR__ . '/lang.php';
+$t = $translations[$lang];
 
 $config = include __DIR__ . '/config.php';
 $token = $config['OPENROUTER_TOKEN'] ?? '';
@@ -71,15 +75,15 @@ $exportFile = $exportDir . '/idea_' . date('Ymd_His') . '.md';
 file_put_contents($exportFile, "# Idee\n\n" . $suggestion);
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?php echo $lang; ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Ideenberater Antwort</title>
+    <title><?php echo htmlspecialchars($t['title'] . ' ' . $t['answer']); ?></title>
 </head>
 <body>
-    <h1>Antwort</h1>
+    <h1><?php echo htmlspecialchars($t['answer']); ?></h1>
     <p><?php echo nl2br(htmlspecialchars($suggestion)); ?></p>
-    <p><a href="exports/<?php echo basename($exportFile); ?>" download>Markdown herunterladen</a></p>
-    <a href="index.php">Neue Anfrage</a>
+    <p><a href="exports/<?php echo basename($exportFile); ?>" download><?php echo htmlspecialchars($t['download_markdown']); ?></a></p>
+    <a href="index.php"><?php echo htmlspecialchars($t['new_request']); ?></a>
 </body>
 </html>

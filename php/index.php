@@ -1,11 +1,19 @@
 <?php
-// index.php - Einfaches Formular für den Ideenberater
+// index.php - Einfaches Formular für den Ideenberater mit Sprachumschaltung
+session_start();
+$lang = $_GET['lang'] ?? $_SESSION['lang'] ?? 'de';
+if (!in_array($lang, ['de', 'en'])) {
+    $lang = 'de';
+}
+$_SESSION['lang'] = $lang;
+$translations = include __DIR__ . '/lang.php';
+$t = $translations[$lang];
 ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<?php echo $lang; ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Ideenberater</title>
+    <title><?php echo htmlspecialchars($t['title']); ?></title>
     <style>
         body { font-family: Arial, sans-serif; margin: 2em; }
         textarea { width: 100%; max-width: 500px; }
@@ -13,11 +21,12 @@
     </style>
 </head>
 <body>
-    <h1>Ideenberater</h1>
+    <p><a href="?lang=de">DE</a> | <a href="?lang=en">EN</a></p>
+    <h1><?php echo htmlspecialchars($t['title']); ?></h1>
     <form action="request.php" method="post">
-        <label for="problem">Beschreibe dein Problem:</label><br>
+        <label for="problem"><?php echo htmlspecialchars($t['prompt']); ?></label><br>
         <textarea name="problem" id="problem" cols="50" rows="5"></textarea><br>
-        <button type="submit">Beraten lassen</button>
+        <button type="submit"><?php echo htmlspecialchars($t['button']); ?></button>
     </form>
 </body>
 </html>
