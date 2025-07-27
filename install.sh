@@ -10,6 +10,14 @@ fi
 read -r -p "Domain (z.B. ideenberater.domain.org): " DOMAIN
 read -r -p "OpenRouter Token: " TOKEN
 read -r -p "E-Mail für Let's Encrypt: " EMAIL
+# Optionale Authentifizierung
+read -r -p "Einfache Authentifizierung einrichten? [y/N]: " SET_AUTH
+if [[ $SET_AUTH =~ ^[Yy]$ ]]; then
+    read -r -p "Benutzername: " AUTH_USER
+    read -r -s -p "Passwort: " AUTH_PASS
+    echo
+    AUTH_ENABLED="yes"
+fi
 
 # Pakete installieren
 export DEBIAN_FRONTEND=noninteractive
@@ -29,6 +37,9 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 
 # Weitere benötigte Pakete installieren
 apt-get install -y nginx certbot python3-certbot-nginx git
+if [ "$AUTH_ENABLED" = "yes" ]; then
+    apt-get install -y apache2-utils
+fi
 
 # Repository klonen
 git clone https://github.com/ideenberater/ideenberater.git /opt/ideenberater
@@ -44,6 +55,10 @@ docker compose up -d
 # Nginx konfigurieren
 cp nginx/ideenberater.conf /etc/nginx/sites-available/ideenberater.conf
 sed -i "s/ideenberater.example.org/$DOMAIN/" /etc/nginx/sites-available/ideenberater.conf
+if [ "$AUTH_ENABLED" = "yes" ]; then
+    htpasswd -bc /etc/nginx/.htpasswd_ideenberater "$AUTH_USER" "$AUTH_PASS"
+    sed -i "/proxy_set_header X-Forwarded-Proto \$scheme;/a \    auth_basic \"Geschuetzt\";\n    auth_basic_user_file /etc/nginx/.htpasswd_ideenberater;" /etc/nginx/sites-available/ideenberater.conf
+fi
 ln -s /etc/nginx/sites-available/ideenberater.conf /etc/nginx/sites-enabled/
 nginx -s reload
 

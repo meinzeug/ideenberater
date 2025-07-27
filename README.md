@@ -15,6 +15,7 @@ Die App wird komplett per `install.sh` eingerichtet, inklusive Docker-Container,
 - Domain (z. B. `ideenberater.domain.org`)
 - OpenRouter-Token
 - E-Mail-Adresse für SSL (Let's Encrypt)
+- Optional: Benutzername & Passwort für Basic Auth
 
 ### 3. GitHub-Repo klonen
 - Repo wird z. B. nach `/opt/ideenberater` heruntergeladen
@@ -76,6 +77,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 
 - HTTPS dank Let's Encrypt (Auto-Renewal via Cron)
 - Zugriff auf PHP nur über Nginx + SSL
+- Optionale Zugangsbeschränkung via Basic Auth (htpasswd)
 - Docker-Isolierung für die PHP-App
 - Updates durch `git pull && docker compose restart` möglich
 
