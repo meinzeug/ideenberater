@@ -7,9 +7,9 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-read -p "Domain (z.B. ideenberater.domain.org): " DOMAIN
-read -p "OpenRouter Token: " TOKEN
-read -p "E-Mail für Let's Encrypt: " EMAIL
+read -r -p "Domain (z.B. ideenberater.domain.org): " DOMAIN
+read -r -p "OpenRouter Token: " TOKEN
+read -r -p "E-Mail für Let's Encrypt: " EMAIL
 
 # Pakete installieren
 export DEBIAN_FRONTEND=noninteractive
@@ -36,4 +36,7 @@ ln -s /etc/nginx/sites-available/ideenberater.conf /etc/nginx/sites-enabled/
 nginx -s reload
 
 # SSL Zertifikat
-certbot --nginx -d $DOMAIN --non-interactive --agree-tos -m $EMAIL
+certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m "$EMAIL"
+
+# Cronjob für Auto-Renewal des Zertifikats einrichten
+(crontab -l 2>/dev/null; echo "0 3 * * * certbot renew --quiet && systemctl reload nginx") | crontab -

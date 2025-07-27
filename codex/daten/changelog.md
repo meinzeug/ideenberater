@@ -22,3 +22,7 @@
 ## [2025-07-27] Verbesserungen
 - Installationsskript erweitert: Root-Prüfung, noninteractive apt, Repository-URL angepasst
 - Indexseite mit minimalem CSS versehen
+
+## [2025-07-27] Weitere Verbesserungen
+- Cronjob in install.sh für automatisches Zertifikats-Renewal eingerichtet.
+  - shellcheck Hinweise umgesetzt (read -r, Quotes)

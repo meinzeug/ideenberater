@@ -19,3 +19,7 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Installationsskript verbessert (Root-Prüfung, noninteractive apt).
 - Git-URL angepasst.
 - Indexseite mit einfachem CSS versehen.
+
+## 2025-07-27 (Codex Lauf Fortsetzung)
+- Cronjob für Zertifikatsrenewal in install.sh ergänzt.
+- shellcheck Hinweise umgesetzt (read -r, Variablen in Anführungszeichen).
