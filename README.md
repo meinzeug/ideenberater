@@ -51,7 +51,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 - Nimmt POST-Daten entgegen
 - Sendet Anfrage an OpenRouter-API (mit Token)
 - Gibt KI-Antwort im HTML zurück
-- Speichert die Antwort optional als Markdown-Datei in `php/exports/`
+ - Speichert die Antwort optional als Markdown- und PDF-Datei in `php/exports/`
 
 ### .env.example / .env oder config.php
 - Das Beispiel `.env.example` zeigt die benötigten Variablen
@@ -100,7 +100,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 
 ## 🔧 Erweiterbar
 
-- PDF-Export der KI-Antwort
+ - PDF-Export der KI-Antwort – umgesetzt
 - Sprachumschaltung (DE/EN) – bereits integriert (inklusive übersetzter Systemnachricht)
 - Simple Authentifizierung (z. B. per Passwort)
 

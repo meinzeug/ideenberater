@@ -73,3 +73,9 @@
 - `lang.php` enthält nun Texte für Fehlermeldungen (DE/EN).
 - `request.php` gibt Fehlermeldungen in der gewählten Sprache aus.
 - Dokumentation und README aktualisiert.
+
+## [2025-07-28] PDF Export
+- KI-Antwort wird jetzt zusätzlich als PDF gespeichert.
+- Bibliothek `fpdf` unter `php/lib/` eingebunden.
+- Ergebnisseite bietet Links zum Download von Markdown und PDF.
+- Dokumentation und README angepasst.

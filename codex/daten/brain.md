@@ -75,3 +75,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Neue Keys in `lang.php` für diverse Fehlermeldungen angelegt.
 - `request.php` nutzt diese Texte jetzt für `die()`-Ausgaben.
 - README und docs entsprechend ergänzt.
+
+## 2025-07-28 (Codex Lauf PDF)
+- Erweiterung: Export der Antwort als PDF.
+- FPDF-Bibliothek integriert und Download-Link ergänzt.
+- Dokumentation und README auf aktuellen Stand gebracht.

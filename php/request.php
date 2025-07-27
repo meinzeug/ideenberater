@@ -67,13 +67,23 @@ $logEntry = date('c') . ' | INPUT: ' . str_replace(["\n", "\r"], ' ', $problem)
     . ' | OUTPUT: ' . str_replace(["\n", "\r"], ' ', $suggestion) . PHP_EOL;
 file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
 
-// Antwort als Markdown exportieren
+// Antwort exportieren
 $exportDir = __DIR__ . '/exports';
 if (!is_dir($exportDir)) {
     mkdir($exportDir, 0775, true);
 }
-$exportFile = $exportDir . '/idea_' . date('Ymd_His') . '.md';
+$timestamp = date('Ymd_His');
+$exportFile = $exportDir . '/idea_' . $timestamp . '.md';
 file_put_contents($exportFile, "# Idee\n\n" . $suggestion);
+
+// Zusätzlich als PDF speichern
+require_once __DIR__ . '/lib/fpdf.php';
+$pdfFile = $exportDir . '/idea_' . $timestamp . '.pdf';
+$pdf = new FPDF();
+$pdf->AddPage();
+$pdf->SetFont('Arial', '', 12);
+$pdf->MultiCell(0, 10, $suggestion);
+$pdf->Output('F', $pdfFile);
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang; ?>">
@@ -84,7 +94,11 @@ file_put_contents($exportFile, "# Idee\n\n" . $suggestion);
 <body>
     <h1><?php echo htmlspecialchars($t['answer']); ?></h1>
     <p><?php echo nl2br(htmlspecialchars($suggestion)); ?></p>
-    <p><a href="exports/<?php echo basename($exportFile); ?>" download><?php echo htmlspecialchars($t['download_markdown']); ?></a></p>
+    <p>
+        <a href="exports/<?php echo basename($exportFile); ?>" download><?php echo htmlspecialchars($t['download_markdown']); ?></a>
+        |
+        <a href="exports/<?php echo basename($pdfFile); ?>" download><?php echo htmlspecialchars($t['download_pdf']); ?></a>
+    </p>
     <a href="index.php"><?php echo htmlspecialchars($t['new_request']); ?></a>
 </body>
 </html>
