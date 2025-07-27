@@ -43,6 +43,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 - Button: *„Beraten lassen“*
 - Ergebnis: KI-Antwort mit Vorschlägen für passende Softwareideen
 - Sprachumschaltung über Links (DE/EN)
+- Die Systemnachricht an OpenRouter wird in der gewählten Sprache formuliert
 
 ### request.php
 - Nimmt POST-Daten entgegen
@@ -97,7 +98,7 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 ## 🔧 Erweiterbar
 
 - PDF-Export der KI-Antwort
-- Sprachumschaltung (DE/EN) – bereits integriert
+- Sprachumschaltung (DE/EN) – bereits integriert (inklusive übersetzter Systemnachricht)
 - Simple Authentifizierung (z. B. per Passwort)
 
 ---

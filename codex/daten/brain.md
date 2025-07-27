@@ -59,3 +59,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Neue Datei php/lang.php mit Übersetzungen.
 - index.php und request.php angepasst.
 - Dokumentation aktualisiert.
+
+## 2025-07-27 (Codex Lauf Systemnachricht)
+- Der System-Prompt der API wurde mehrsprachig ausgeführt.
+- Übersetzung `system_message` in lang.php ergänzt.
+- request.php nutzt nun diese Übersetzung.

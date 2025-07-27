@@ -58,6 +58,7 @@ Das Skript führt folgende Schritte aus:
 - Logging der Nutzeranfragen in einer Datei oder Datenbank.
 - PDF-Export der KI-Antwort.
 - Sprachumschaltung (DE/EN) über GET-Parameter oder Session (bereits umgesetzt).
+  Die Systemnachricht an die OpenRouter-API wird dabei ebenfalls in der gewählten Sprache gesendet.
 - Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus.
 
 ## Entwicklungsumgebung

@@ -58,3 +58,8 @@
 - index.php und request.php unterstützen nun DE/EN per Session und GET.
 - Neue Datei php/lang.php.
 - Konzept, Docs und README angepasst.
+
+## [2025-07-27] Verbesserte Systemnachricht
+- `lang.php` enthält nun einen Schlüssel `system_message` für DE und EN.
+- `request.php` sendet diese Meldung als System-Prompt an die OpenRouter-API.
+- Dokumentation und README entsprechend ergänzt.
