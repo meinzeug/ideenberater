@@ -48,3 +48,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Erweiterung der Konfiguration um `OPENROUTER_MODEL`.
 - PHP-Skripte angepasst, sodass das Modell über die Umgebung gesteuert werden kann.
 - Dokumentation und README entsprechend ergänzt.
+
+## 2025-07-27 (Codex Lauf erneut)
+- Markdown-Export umgesetzt.
+- Neue Ablage `php/exports/` erzeugt und in `.gitignore` eingetragen.
+- README, docs und Konzept aktualisiert.

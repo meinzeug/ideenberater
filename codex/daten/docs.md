@@ -36,7 +36,7 @@ im Projekt **Ideenberater**.
    HTTP-Anfrage an die OpenRouter-API.
 4. Die Antwort wird im Browser ausgegeben (HTML).
 5. Anfrage und Antwort werden in `logs/requests.log` protokolliert.
-   Optional könnte hier eine Markdown- oder PDF-Exportfunktion eingebunden werden.
+6. Die Antwort wird zusätzlich als Markdown-Datei im Verzeichnis `php/exports/` gespeichert.
 
 ## OpenRouter-API
 - Endpoint: wird über die Konfiguration festgelegt.
@@ -56,7 +56,7 @@ Das Skript führt folgende Schritte aus:
 
 ## Erweiterungsmöglichkeiten
 - Logging der Nutzeranfragen in einer Datei oder Datenbank.
-- Export der KI-Antwort als Markdown oder PDF.
+- PDF-Export der KI-Antwort.
 - Sprachumschaltung (DE/EN) über GET-Parameter oder Session.
 - Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus.
 

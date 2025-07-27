@@ -48,3 +48,8 @@
 - `OPENROUTER_MODEL` in `.env.example` aufgenommen
 - `config.php` und `request.php` verwenden nun diese Variable
 - README und docs ergänzt
+
+## [2025-07-27] Markdown-Export
+- `request.php` legt nun eine Markdown-Datei im Ordner `php/exports/` ab
+- `.gitignore` um `php/exports/` erweitert
+- Dokumentation und README aktualisiert
