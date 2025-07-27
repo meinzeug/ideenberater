@@ -34,3 +34,7 @@
 
 ## [2025-07-27] Fehlerbehandlung verbessert
 - `request.php` prüft jetzt JSON-Fehler und bricht bei ungültiger Antwort ab.
+
+## [2025-07-27] Logging hinzugefügt
+- Nutzeranfragen und Antworten werden jetzt in `logs/requests.log` gespeichert.
+- Dokumentation angepasst (Verzeichnisstruktur und PHP-Ablauf).

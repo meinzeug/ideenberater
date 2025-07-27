@@ -33,3 +33,8 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 ## 2025-07-27 (Codex Lauf Weiter)
 - Fehlerbehandlung in `request.php` verbessert: prüft jetzt JSON-Decodierung und meldet Fehler.
 - Versuch, Container zu starten scheitert, da Docker-Daemon hier nicht läuft.
+
+## 2025-07-27 (Codex Lauf Zusätzlich)
+- Logging für Nutzeranfragen umgesetzt.
+- Neue Datei `logs/requests.log` fängt Problem und Antwort auf.
+- Dokumentation entsprechend ergänzt.
