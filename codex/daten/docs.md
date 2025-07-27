@@ -23,6 +23,8 @@ im Projekt **Ideenberater**.
 │   ├── index.php
 │   ├── request.php
 │   └── config.php (.env)
+├── logs/
+│   └── requests.log
 └── nginx/
     └── ideenberater.conf
 ```
@@ -32,8 +34,9 @@ im Projekt **Ideenberater**.
 2. Das Formular sendet die Eingabe via POST an `request.php`.
 3. `request.php` liest den OpenRouter-Token aus `config.php` und stellt eine
    HTTP-Anfrage an die OpenRouter-API.
-4. Die Antwort wird im Browser ausgegeben (HTML). Optional könnte hier auch
-   eine Markdown- oder PDF-Exportfunktion eingebunden werden.
+4. Die Antwort wird im Browser ausgegeben (HTML).
+5. Anfrage und Antwort werden in `logs/requests.log` protokolliert.
+   Optional könnte hier eine Markdown- oder PDF-Exportfunktion eingebunden werden.
 
 ## OpenRouter-API
 - Endpoint: wird über die Konfiguration festgelegt.

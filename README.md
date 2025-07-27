@@ -74,6 +74,10 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 - Docker-Isolierung für die PHP-App
 - Updates durch `git pull && docker-compose restart` möglich
 
+## 📜 Logs
+- Alle Anfragen und KI-Antworten werden in `logs/requests.log` gespeichert.
+- Die Logdatei ist per `.gitignore` ausgeschlossen.
+
 ---
 
 ## ✅ Vorteile dieses Ansatzes
@@ -85,9 +89,8 @@ Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet d
 
 ---
 
-## 🔧 Erweiterbar (optional)
+## 🔧 Erweiterbar
 
-- Logging der Anfragen
 - Markdown- oder PDF-Export der KI-Antwort
 - Sprachumschaltung (DE/EN)
 - Simple Authentifizierung (z. B. per Passwort)

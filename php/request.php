@@ -50,6 +50,16 @@ if ($jsonError !== JSON_ERROR_NONE) {
     die('Ungültige Antwort von der API: ' . json_last_error_msg());
 }
 $suggestion = $answer['choices'][0]['message']['content'] ?? 'Keine Antwort erhalten.';
+
+// Anfrage und Antwort protokollieren
+$logDir = dirname(__DIR__) . '/logs';
+if (!is_dir($logDir)) {
+    mkdir($logDir, 0775, true);
+}
+$logFile = $logDir . '/requests.log';
+$logEntry = date('c') . ' | INPUT: ' . str_replace(["\n", "\r"], ' ', $problem)
+    . ' | OUTPUT: ' . str_replace(["\n", "\r"], ' ', $suggestion) . PHP_EOL;
+file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
 ?>
 <!DOCTYPE html>
 <html lang="de">
