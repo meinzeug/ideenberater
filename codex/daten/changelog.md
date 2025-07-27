@@ -15,3 +15,7 @@
 - Beispiel `.env` angelegt
 - Nginx-Konfiguration `nginx/ideenberater.conf` erstellt
 - `install.sh` als Installationsskript angelegt
+
+## [2025-07-27] Verbesserungen
+- Installationsskript erweitert: Root-Prüfung, noninteractive apt, Repository-URL angepasst
+- Indexseite mit minimalem CSS versehen
