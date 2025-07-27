@@ -53,3 +53,9 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - Markdown-Export umgesetzt.
 - Neue Ablage `php/exports/` erzeugt und in `.gitignore` eingetragen.
 - README, docs und Konzept aktualisiert.
+
+## 2025-07-27 (Codex Lauf Sprache)
+- Sprachumschaltung zwischen DE und EN implementiert.
+- Neue Datei php/lang.php mit Übersetzungen.
+- index.php und request.php angepasst.
+- Dokumentation aktualisiert.

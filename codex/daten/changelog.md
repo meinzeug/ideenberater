@@ -53,3 +53,8 @@
 - `request.php` legt nun eine Markdown-Datei im Ordner `php/exports/` ab
 - `.gitignore` um `php/exports/` erweitert
 - Dokumentation und README aktualisiert
+
+## [2025-07-27] Sprachumschaltung
+- index.php und request.php unterstützen nun DE/EN per Session und GET.
+- Neue Datei php/lang.php.
+- Konzept, Docs und README angepasst.

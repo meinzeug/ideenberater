@@ -57,7 +57,7 @@ Das Skript führt folgende Schritte aus:
 ## Erweiterungsmöglichkeiten
 - Logging der Nutzeranfragen in einer Datei oder Datenbank.
 - PDF-Export der KI-Antwort.
-- Sprachumschaltung (DE/EN) über GET-Parameter oder Session.
+- Sprachumschaltung (DE/EN) über GET-Parameter oder Session (bereits umgesetzt).
 - Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus.
 
 ## Entwicklungsumgebung
