@@ -29,3 +29,7 @@ Hier werden Fragen, Beobachtungen und wichtige Notizen festgehalten.
 - `shellcheck` ausgeführt, keine Warnungen.
 - `env_setup.sh` getestet; meldet systemd Fehler im Container, aber Pakete werden installiert.
 - `request.php` prüft nun Token und HTTP-Status und gibt Fehlermeldungen aus.
+
+## 2025-07-27 (Codex Lauf Weiter)
+- Fehlerbehandlung in `request.php` verbessert: prüft jetzt JSON-Decodierung und meldet Fehler.
+- Versuch, Container zu starten scheitert, da Docker-Daemon hier nicht läuft.
