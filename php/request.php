@@ -5,6 +5,10 @@ $config = include __DIR__ . '/config.php';
 $token = $config['OPENROUTER_TOKEN'] ?? '';
 $endpoint = $config['OPENROUTER_ENDPOINT'] ?? 'https://openrouter.ai/api/v1/chat/completions';
 
+if (!$token || $token === 'DEIN_TOKEN_HIER') {
+    die('API-Token fehlt. Bitte in config.php oder .env hinterlegen.');
+}
+
 $problem = $_POST['problem'] ?? '';
 if (!$problem) {
     die('Keine Eingabe erhalten.');
@@ -33,6 +37,10 @@ curl_setopt_array($ch, [
 $response = curl_exec($ch);
 if ($response === false) {
     die('Fehler bei der Anfrage: ' . curl_error($ch));
+}
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+if ($httpCode !== 200) {
+    die('API Fehler: HTTP ' . $httpCode);
 }
 curl_close($ch);
 

@@ -4,8 +4,6 @@
 Einfaches PHP-Webinterface auf eigener Domain (z. B. `ideenberater.domain.org`), das OpenRouter nutzt, um KI-basierte Vorschläge für Softwareideen zu liefern.  
 Die App wird komplett per `install.sh` eingerichtet, inklusive Docker-Container, Nginx-Reverse-Proxy und SSL.
 
----
-
 ## 🔁 Installationsprozess (`install.sh`)
 
 ### 1. Voraussetzung prüfen
@@ -32,6 +30,9 @@ Die App wird komplett per `install.sh` eingerichtet, inklusive Docker-Container,
   - Weiterleitung von `ideenberater.domain.org` → localhost:8080 (Docker)
   - SSL via Certbot (Let's Encrypt)
 - Certbot-Setup + Auto-Renewal
+## Entwicklungsumgebung
+Für lokale Tests kann `codex/env_setup.sh` ausgeführt werden. Danach startet die Anwendung mit `docker-compose up -d`.
+
 
 ---
 

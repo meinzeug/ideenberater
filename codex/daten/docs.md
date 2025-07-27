@@ -55,3 +55,6 @@ Das Skript führt folgende Schritte aus:
 - Export der KI-Antwort als Markdown oder PDF.
 - Sprachumschaltung (DE/EN) über GET-Parameter oder Session.
 - Einfache Authentifizierung per htpasswd oder ähnlichem Mechanismus.
+
+## Entwicklungsumgebung
+Für lokale Tests steht das Skript `codex/env_setup.sh` bereit. Es installiert Docker, Nginx, PHP und weitere Tools. Anschließend können die Container mit `docker-compose up -d` gestartet werden.
